@@ -1,0 +1,20 @@
+name: 'Classic Discord Webhook'
+description: 'This GitHub Action sends simple discord messages for your commits.'
+branding:
+  icon: activity
+  color: gray-dark
+
+inputs:
+  id:
+    description: The Discord Webhook ID
+    required: true
+  token:
+    description: The Discord Webhook Token
+    required: true
+  threadId:
+    description: If you want to send the embed message in a specific thread
+    required: true
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
